@@ -1,2 +1,2 @@
 # GifQuiz
-Repositorio del proyecto Reacthatón: GifQuiz
+Repositorio del proyecto Reacathón: GifQuiz
