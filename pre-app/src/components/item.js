@@ -1,7 +1,7 @@
 import React from 'react';
 
 const GiphyItem = ({ giphyData }) => {
-  const { name, nativeName, flag } = giphyData;
+  const { images: { original: { url } } }  = { giphyData };
   return (
   
   );
