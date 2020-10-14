@@ -1,2 +1,2 @@
-# GifQuiz
-Repositorio del proyecto Reacathón: GifQuiz
+# GifQuote
+Repositorio del proyecto Reacathón: GifQuote
