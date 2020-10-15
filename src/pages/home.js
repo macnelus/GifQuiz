@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { getGiph } from '../lib/api';
 
+import Giph from '../components/giph';
+
 const Home = () => {
   const [words, setWords] = useState({
     'word-1': '',
@@ -36,21 +38,27 @@ const Home = () => {
     <main className="page">
       <h1>Home</h1>
 
-      <article>
-        <picture>
-          <img src={giphys['word-1']} alt="" />
-        </picture>
-        <form onSubmit={handleSubmit} data-word="word-1">
-          <label htmlFor="word-1">giphy</label>
-          <input
-            type="search"
-            name="word-1"
-            id="word-1"
-            value={words['word-1']}
-            onChange={handleChange}
-          />
-        </form>
-      </article>
+      <Giph
+        handleSubmit={handleSubmit}
+        handleChange={handleChange}
+        giphys={giphys}
+        words={words}
+        word={'word-1'}
+      />
+      <Giph
+        handleSubmit={handleSubmit}
+        handleChange={handleChange}
+        giphys={giphys}
+        words={words}
+        word={'word-2'}
+      />
+      <Giph
+        handleSubmit={handleSubmit}
+        handleChange={handleChange}
+        giphys={giphys}
+        words={words}
+        word={'word-3'}
+      />
     </main>
   );
 };
