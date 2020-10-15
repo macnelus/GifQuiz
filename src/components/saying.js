@@ -10,7 +10,6 @@ const Saying = ({ saying }) => {
   });
 
   const [winner, setWinner] = useState(false);
-
   const [giphys, setGiphys] = useState([]);
 
   const handleChange = (event) => {
@@ -51,7 +50,7 @@ const Saying = ({ saying }) => {
             />
           );
         })}
-        <button type="submit"></button>
+        <button type="submit">Submit</button>
       </form>
       <p>Gano {winner ? 'Yes' : 'No'}</p>
     </article>
@@ -59,3 +58,9 @@ const Saying = ({ saying }) => {
 };
 
 export default Saying;
+
+// if (true) {
+//   return 'Yes';
+// } else {
+//   return 'No';
+// }
