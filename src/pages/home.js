@@ -2,20 +2,24 @@ import React from 'react';
 import Saying from '../components/saying';
 
 const sayings = [
-  ['mal', 'tiempo', 'cara'],
-  ['casa', 'herrero', 'palo'],
-  ['pajaro', 'mano', 'volando'],
+  {
+    keyword: ['mal', 'tiempo', 'cara'],
+    middleWords: ['a', '', 'buena', ''],
+  },
+  {
+    keyword: ['casa', 'herrero', 'palo'],
+    middleWords: ['en', 'del', 'cuchillo de', ''],
+  },
 ];
 
 const randomNumberForSayings = () => Math.floor(Math.random() * sayings.length);
-
-const getRandomSaying = () => sayings[randomNumberForSayings()];
+const { keyword, middleWords } = sayings[randomNumberForSayings()];
 
 const GiphyPage = () => {
   return (
     <main>
       <h2>Giph page</h2>
-      <Saying saying={getRandomSaying()} />
+      <Saying saying={keyword} middleWords={middleWords} />
     </main>
   );
 };
