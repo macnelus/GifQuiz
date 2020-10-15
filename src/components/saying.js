@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { getGiph } from '../lib/api';
 import GiphForm from '../components/giphy-form';
 
-const Saying = ({ saying }) => {
+const Saying = ({ saying, middleWords }) => {
   const [words, setWords] = useState({
     'word-1': '',
     'word-2': '',
@@ -41,15 +41,19 @@ const Saying = ({ saying }) => {
       <form onSubmit={handleSubmit}>
         {giphys.map((giph, i) => {
           return (
-            <GiphForm
-              handleChange={handleChange}
-              giph={giph}
-              words={words}
-              word={`word-${i + 1}`}
-              key={giph}
-            />
+            <>
+              <p>{middleWords[i]}</p>
+              <GiphForm
+                handleChange={handleChange}
+                giph={giph}
+                words={words}
+                word={`word-${i + 1}`}
+                key={giph}
+              />
+            </>
           );
         })}
+        <p>{middleWords[middleWords.length - 1]}</p>
         <button type="submit">Submit</button>
       </form>
       <p>Gano {winner ? 'Yes' : 'No'}</p>
@@ -58,9 +62,3 @@ const Saying = ({ saying }) => {
 };
 
 export default Saying;
-
-// if (true) {
-//   return 'Yes';
-// } else {
-//   return 'No';
-// }
