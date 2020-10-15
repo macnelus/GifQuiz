@@ -4,16 +4,16 @@ const GiphForm = ({ giph, word, words, handleChange }) => {
   return (
     <div>
       <picture>
-        <img src={giphys['word-1']} alt="" />
+        <img src={giph} alt="" />
       </picture>
-      <label htmlFor="word-1">Palabra</label>
+      <label htmlFor={word}>Palabra</label>
       <input
-        id="word-1"
+        id={word}
         type="text"
         placeholder="palabra"
-        name="word-1"
+        name={word}
         onChange={handleChange}
-        value={words['word-1']}
+        value={words[word]}
       />
     </div>
   );

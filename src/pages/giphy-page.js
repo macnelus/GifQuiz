@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { getGiph } from '../lib/api';
+import GiphForm from '../components/giphy-form';
 
 const GiphyPage = () => {
-  // const saying = ['casa', 'herrero', 'cuchillo'];
   const saying = ['mal', 'tiempo', 'cara'];
 
   const [words, setWords] = useState({
@@ -36,7 +36,19 @@ const GiphyPage = () => {
 
       <article>
         <form>
-          <div>
+          {giphys.map((giph, i) => {
+            return (
+              <GiphForm
+                handleChange={handleChange}
+                giph={giph}
+                words={words}
+                word={`word-${i + 1}`}
+                key={giph}
+              />
+            );
+          })}
+
+          {/* <div>
             <picture>
               <img src={giphys['word-1']} alt="" />
             </picture>
@@ -64,8 +76,8 @@ const GiphyPage = () => {
               value={words['word-2']}
             />
           </div>
-          <div>
-            <picture>
+          <div> */}
+          {/* <picture>
               <img src={giphys['word-3']} alt="" />
             </picture>
             <label htmlFor="word-3">Palabra</label>
@@ -77,7 +89,7 @@ const GiphyPage = () => {
               onChange={handleChange}
               value={words['word-3']}
             />
-          </div>
+          </div> */}
         </form>
       </article>
     </main>
