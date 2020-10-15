@@ -1,13 +1,21 @@
 import React from 'react';
 import Saying from '../components/saying';
 
-const GiphyPage = () => {
-  const saying = ['lol', 'tiempo', 'cara'];
+const sayings = [
+  ['mal', 'tiempo', 'cara'],
+  ['casa', 'herrero', 'palo'],
+  ['pajaro', 'mano', 'volando'],
+];
 
+const randomNumberForSayings = () => Math.floor(Math.random() * sayings.length);
+
+const getRandomSaying = () => sayings[randomNumberForSayings()];
+
+const GiphyPage = () => {
   return (
     <main>
       <h2>Giph page</h2>
-      <Saying saying={saying} />
+      <Saying saying={getRandomSaying()} />
     </main>
   );
 };
