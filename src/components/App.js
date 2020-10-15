@@ -1,10 +1,16 @@
 import React from 'react';
+import { Switch, BrowserRouter, Route } from 'react-router-dom';
+
+// pages
+import Home from '../pages/home';
 
 function App() {
   return (
-    <div className="App">
-      <h1>GiphyQuote</h1>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={Home} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 
