@@ -1,4 +1,6 @@
 import React from 'react';
+import Header from '../components/header.js';
+import Footer from '../components/footer.js';
 import Saying from '../components/saying';
 
 const sayings = [
@@ -17,11 +19,22 @@ const { keyword, middleWords } = sayings[randomNumberForSayings()];
 
 const GiphyPage = () => {
   return (
-    <main>
-      <h2>Giph page</h2>
-      <Saying saying={keyword} middleWords={middleWords} />
-    </main>
+    <div className="container">
+      <Header />
+      <main>
+        <Saying saying={keyword} middleWords={middleWords} />
+
+        <section className="">
+          <div className="owner">
+            <img src="./imgs/sign.png" alt="giphy" />
+          </div>
+          <div>
+            <h3>¿Quien lo ha dicho?</h3>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </div>
   );
 };
-
 export default GiphyPage;

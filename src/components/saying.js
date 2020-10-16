@@ -37,27 +37,32 @@ const Saying = ({ saying, middleWords }) => {
   };
 
   return (
-    <article>
+    <section className="">
       <form onSubmit={handleSubmit}>
-        {giphys.map((giph, i) => {
-          return (
-            <>
-              <p>{middleWords[i]}</p>
-              <GiphForm
-                handleChange={handleChange}
-                giph={giph}
-                words={words}
-                word={`word-${i + 1}`}
-                key={giph}
-              />
-            </>
-          );
-        })}
-        <p>{middleWords[middleWords.length - 1]}</p>
-        <button type="submit">Submit</button>
+        <div className="giphys-container">
+          {giphys.map((giph, i) => {
+            return (
+              <div key={i} className="giph-container">
+                <div className="words">
+                  <p>{middleWords[i]}</p>
+                </div>
+                <GiphForm
+                  handleChange={handleChange}
+                  giph={giph}
+                  words={words}
+                  word={`word-${i + 1}`}
+                  key={giph}
+                />
+              </div>
+            );
+          })}
+          <p>{middleWords[middleWords.length - 1]}</p>
+        </div>
+        <div className="giphy-submit-container">
+          <button type="submit">Submit</button>
+        </div>
       </form>
-      <p>Gano {winner ? 'Yes' : 'No'}</p>
-    </article>
+    </section>
   );
 };
 

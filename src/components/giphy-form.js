@@ -2,11 +2,9 @@ import React from 'react';
 
 const GiphForm = ({ giph, word, words, handleChange }) => {
   return (
-    <div>
-      <picture>
-        <img src={giph} alt="" />
-      </picture>
-      <label htmlFor={word}>Palabra</label>
+    <div className="giphy">
+      <picture style={{ backgroundImage: `url(${giph})` }}></picture>
+      {/* <picture style={`background-image: url(${giph})`}></picture> */}
       <input
         id={word}
         type="text"
