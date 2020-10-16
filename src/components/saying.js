@@ -58,7 +58,9 @@ const Saying = ({ saying, middleWords }) => {
           })}
           <p>{middleWords[middleWords.length - 1]}</p>
         </div>
-        <button type="submit">Submit</button>
+        <div className="giphy-submit-container">
+          <button type="submit">Submit</button>
+        </div>
       </form>
     </section>
   );
