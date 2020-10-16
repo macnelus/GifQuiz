@@ -23,10 +23,13 @@
 .giphy {
   & picture {
     width: 100%;
-    // &::after {
-    //   content: '';
-    //   display: block;
-    //   padding-bottom: 100%;
-    // }
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &::after {
+      content: '';
+      display: block;
+      padding-bottom: 100%;
+    }
   }
 }
