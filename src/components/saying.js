@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { getGiph } from '../lib/api';
 import GiphForm from '../components/giphy-form';
+import sign from '../images/sign.png';
+import cup from '../images/cup.png';
 
 const Saying = ({ saying, middleWords }) => {
   const [words, setWords] = useState({
@@ -37,7 +39,16 @@ const Saying = ({ saying, middleWords }) => {
     setWinner(areWordsTheSameAsSaying);
   };
 
+  const showResult = () => {
+    let resultToRender;
 
+    if (winner) {
+      resultToRender = <img src={cup} alt="giphy" className="author" />;
+    } else {
+      resultToRender = <img src={sign} alt="giphy" className="author" />;
+    }
+    return resultToRender;
+  };
 
   return (
     <section className="">
@@ -65,7 +76,9 @@ const Saying = ({ saying, middleWords }) => {
           <button type="submit">Averiguar</button>
         </div>
       </form>
- 
+      <section className="wrapper-author">
+        <div className="owner">{showResult()}</div>
+      </section>
     </section>
   );
 };

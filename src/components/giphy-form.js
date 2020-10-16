@@ -4,7 +4,6 @@ const GiphForm = ({ giph, word, words, handleChange }) => {
   return (
     <div className="giphy">
       <picture style={{ backgroundImage: `url(${giph})` }}></picture>
-      {/* <picture style={`background-image: url(${giph})`}></picture> */}
       <input
         id={word}
         type="text"

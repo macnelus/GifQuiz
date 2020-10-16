@@ -27,8 +27,8 @@ const randomNumberForSayings = () => Math.floor(Math.random() * sayings.length);
 const { keyword, middleWords } = sayings[randomNumberForSayings()];
 
 const handleReload = (event) => {
-    event.preventDefault();
-    window.location.reload();
+  event.preventDefault();
+  window.location.reload();
 };
 
 const GiphyPage = () => {
@@ -39,9 +39,9 @@ const GiphyPage = () => {
         <Saying saying={keyword} middleWords={middleWords} />
 
         <section className="wrapper-author">
-          <div className="owner">
+          {/* <div className="owner">
             <img src={sign} alt="giphy" className="author" />
-          </div>
+          </div> */}
           <div>
             <h3>¿Quien lo ha dicho?</h3>
           </div>
