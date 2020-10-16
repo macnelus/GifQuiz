@@ -81,14 +81,14 @@ const Saying = ({ saying, middleWords }) => {
         </div>
       </form>
       <section className="wrapper-author">
-        <div className="owner">{showResult()}
-        
-        <div>
-          <h3>¿Quien lo ha dicho?</h3>
-        </div>
-        <button type="submit" className="reload" onClick={handleReload}>
-          Volver a jugar
-        </button>
+        <div className="owner">
+          {showResult()}
+          <div className="question">
+            <h3>¿Quien lo ha dicho?</h3>
+          </div>
+          <button type="submit" className="reload" onClick={handleReload}>
+            Volver a jugar
+          </button>
         </div>
       </section>
     </section>
