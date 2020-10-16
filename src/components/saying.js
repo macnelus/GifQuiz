@@ -30,11 +30,14 @@ const Saying = ({ saying, middleWords }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    console.log('hola');
     const areWordsTheSameAsSaying = saying.every((sayingWord, i) => {
       return sayingWord.toLowerCase() === words[`word-${i + 1}`].toLowerCase();
     });
     setWinner(areWordsTheSameAsSaying);
   };
+
+
 
   return (
     <section className="">
@@ -59,9 +62,10 @@ const Saying = ({ saying, middleWords }) => {
           <p>{middleWords[middleWords.length - 1]}</p>
         </div>
         <div className="giphy-submit-container">
-          <button type="submit">Submit</button>
+          <button type="submit">Averiguar</button>
         </div>
       </form>
+ 
     </section>
   );
 };
