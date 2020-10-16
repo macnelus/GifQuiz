@@ -26,7 +26,7 @@ const GiphyPage = () => {
 
         <section className="">
           <div className="owner">
-            <img src="./imgs/sign.png" alt="giphy" />
+            <img src="" alt="giphy" />
           </div>
           <div>
             <h3>¿Quien lo ha dicho?</h3>
