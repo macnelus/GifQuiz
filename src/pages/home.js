@@ -26,29 +26,12 @@ const sayings = [
 const randomNumberForSayings = () => Math.floor(Math.random() * sayings.length);
 const { keyword, middleWords } = sayings[randomNumberForSayings()];
 
-const handleReload = (event) => {
-  event.preventDefault();
-  window.location.reload();
-};
-
 const GiphyPage = () => {
   return (
     <div className="container">
       <Header />
       <main>
         <Saying saying={keyword} middleWords={middleWords} />
-
-        <section className="wrapper-author">
-          {/* <div className="owner">
-            <img src={sign} alt="giphy" className="author" />
-          </div> */}
-          <div>
-            <h3>¿Quien lo ha dicho?</h3>
-          </div>
-          <button type="submit" className="reload" onClick={handleReload}>
-            Volver a jugar
-          </button>
-        </section>
       </main>
       <Footer />
     </div>
