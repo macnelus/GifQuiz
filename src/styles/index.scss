@@ -1,5 +1,6 @@
 @import 'normalize';
 @import 'global';
+@import 'header';
 
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap');
 
@@ -25,16 +26,7 @@ picture {
   max-width: 100vw;
   min-height: 50vh;
   margin: 0 auto;
-  header {
-    display: flex;
-    justify-content: center;
-      h1 {
-        font-family: 'Shadows Into Light Two', cursive;
-        font-size: 5rem;
-        color: rgba(255, 255,255, 1);
-        text-shadow: 4px 4px 8px black;
-      }
-  }
+  
   .main {
       display: flex;
       align-items: center;
