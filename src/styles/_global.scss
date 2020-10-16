@@ -33,15 +33,15 @@ picture {
   min-height: 100vh;
 }
 .reload {
-    display: block;
-    width: 10vw;
-    margin: 0 auto;
-    text-align: center;
-    border: 2px solid white;
-    background-color: transparent;
-    padding: 0.625rem;
-    color: white;
-  }
+  display: block;
+  width: 10vw;
+  margin: 0 auto;
+  text-align: center;
+  border: 2px solid white;
+  background-color: transparent;
+  padding: 0.625rem;
+  color: white;
+}
 
 .wrapper-author {
   width: 60vw;
@@ -55,4 +55,9 @@ picture {
   flex-direction: column;
   width: 20%;
   margin: 0 auto;
+}
+.question {
+  display: flex;
+  margin: 0 auto;
+  margin-bottom: 2rem;
 }

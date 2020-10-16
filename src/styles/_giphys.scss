@@ -53,6 +53,7 @@
 
 .giphy-submit-container {
   padding: 1.25rem;
+
   & button {
     display: block;
     -webkit-appearance: none;
@@ -65,6 +66,6 @@
     background-color: transparent;
     padding: 0.625rem;
     color: white;
+    margin-top: 2rem;
   }
 }
-
