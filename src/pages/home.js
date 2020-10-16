@@ -21,10 +21,10 @@ const GiphyPage = () => {
   return (
     <div className="container">
       <Header />
-      <main className="main">
+      <main>
         <Saying saying={keyword} middleWords={middleWords} />
 
-        <section className="right">
+        <section className="">
           <div className="owner">
             <img src="./imgs/sign.png" alt="giphy" />
           </div>

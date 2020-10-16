@@ -1,0 +1,32 @@
+.giphys-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  & > * {
+    // flex-basis: calc(25% - 1.25rem);
+    max-width: calc(25% - 1.25rem);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    & > * {
+      max-width: calc(50% - 1.25rem);
+    }
+  }
+}
+
+.giph-container {
+  & .words {
+    align-self: end;
+  }
+}
+
+.giphy {
+  & picture {
+    width: 100%;
+    // &::after {
+    //   content: '';
+    //   display: block;
+    //   padding-bottom: 100%;
+    // }
+  }
+}
