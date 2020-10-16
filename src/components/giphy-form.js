@@ -2,11 +2,10 @@ import React from 'react';
 
 const GiphForm = ({ giph, word, words, handleChange }) => {
   return (
-    <div>
+    <div className="giphy">
       <picture>
         <img src={giph} alt="" />
       </picture>
-      <label htmlFor={word}>Palabra</label>
       <input
         id={word}
         type="text"

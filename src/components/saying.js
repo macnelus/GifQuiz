@@ -37,8 +37,37 @@ const Saying = ({ saying, middleWords }) => {
   };
 
   return (
-    <article>
-      <form onSubmit={handleSubmit}>
+    /*<form action="/" method= "POST">
+            <div class="phrase">
+              <div class="words">
+                <label for="">En</label>
+              </div>
+                <div class="giphy">
+                  <img src="https://media.giphy.com/media/5xtDarqCp0eomZaFJW8/giphy.gif" alt="">
+                  <input type="text" id="input1">
+              </div>
+                            <div class="words">
+                <label for="">de</label>
+              </div>
+              <div class="giphy">
+                  <img src="https://media.giphy.com/media/xTiTnkxnCpPkQmTp84/giphy.gif" alt="">
+                  <input type="text" id="input1">
+              </div>
+                            <div class="words">
+                <label for="">,</label>
+              </div>
+              <div class="giphy">
+                  <img src="https://media.giphy.com/media/LoU1J08SI9FMNhAxR4/giphy.gif" alt="">
+                  <input type="text" id="input1">
+              </div>
+              <div class="words">
+                <label for="">de palo</label>
+              </div>
+            </div>
+        </form> */
+    <>
+    
+      <form onSubmit={handleSubmit} className="left-form">
         {giphys.map((giph, i) => {
           return (
             <>
@@ -56,8 +85,7 @@ const Saying = ({ saying, middleWords }) => {
         <p>{middleWords[middleWords.length - 1]}</p>
         <button type="submit">Submit</button>
       </form>
-      <p>Gano {winner ? 'Yes' : 'No'}</p>
-    </article>
+    </>
   );
 };
 
